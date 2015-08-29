@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="http://code.angularjs.org/1.0.2/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/directive.js"></script>
+</head>
+<body ng-app="dragdrop">
+    <div class="container-fluid"></div>
+    <div class="row" ng-controller="dragdropController">
+        <ul ui-sortable ng-model="list">
+            <li class="col-md-6" ng:repeat="item in list" class="item">
+                <p>{{item.name}}</p>
+                <img style="height:50px; width:50px;" ng-src="{{item.imageUrl}}"
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
